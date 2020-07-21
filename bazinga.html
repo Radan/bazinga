@@ -1,0 +1,116 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+    <style type="text/css">
+        #mynetwork {
+            width: 1200px;
+            height: 700px;
+            border: 1px solid lightgray;
+        }
+    </style>
+</head>
+<body>
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+    // create an array with nodes
+    var nodes = new vis.DataSet([
+        {id: 1, label: 'Jansi'},
+        {id: 2, label: 'RKrish'},
+        {id: 3, label: 'KRS'},
+        {id: 4, label: 'freezing'},
+        {id: 5, label: 'Legolas'},
+        {id: 6, label: 'Balaji'},
+        {id: 7, label: 'Daffy'},
+        {id: 8, label: 'Mani'},
+        {id: 9, label: 'Prasanth'},
+        {id: 10, label: 'Singh'},
+        {id: 11, label: 'Tricky'},
+        {id: 12, label: 'Ashva'},
+        {id: 13, label: 'Hariharan'},
+        {id: 14, label: 'MrMeo'},
+        {id: 15, label: 'Sureen'},
+        {id: 16, label: 'Siddhu'},
+        {id: 17, label: 'Siva'},
+        {id: 18, label: 'Watson'},
+        {id: 19, label: 'Mano'},
+        {id: 20, label: 'saigeetha'},
+        {id: 21, label: 'yogesh'},
+        {id: 22, label: 'VJ7'},
+        {id: 23, label: 'yoka'},
+        {id: 24, label: 'satish'},
+        {id: 25, label: 'starkyT'},
+        {id: 26, label: 'gopinath'},
+        {id: 27, label: 'viki navi'},
+        {id: 28, label: 'vamsi'},
+        {id: 29, label: '10'},
+        {id: 30, label: 'Tamilan'},
+        {id: 31, label: 'Kani'},
+        {id: 32, label: 'dhinesh/abi'},
+        {id: 33, label: 'Hamenth'},
+        {id: 34, label: 'EvilAnand'},
+        {id: 35, label: 'Babu'},
+        {id: 36, label: 'Akash'},
+        {id: 37, label: 'Vinoth?'},
+        {id: 38, label: 'dhinesh'},
+    ]);
+
+    // create an array with edges
+    var edges = new vis.DataSet([
+        {from: 1, to: 2},
+        {from: 1, to: 5},
+        {from: 2, to: 4},
+        {from: 2, to: 6},
+        {from: 2, to: 3},
+        {from: 2, to: 7},
+        {from: 3, to: 8},
+        {from: 3, to: 9},
+        {from: 3, to: 10},
+        {from: 3, to: 11},
+        {from: 3, to: 12},
+        {from: 3, to: 14},
+        {from: 3, to: 15},
+        {from: 9, to: 10},
+        {from: 14, to: 15},
+        {from: 12, to: 13},
+        {from: 15, to: 16},
+        {from: 15, to: 25},
+        {from: 15, to: 27},
+        {from: 6, to: 17},
+        {from: 6, to: 28},
+        {from: 6, to: 29},
+        {from: 6, to: 31},
+        {from: 6, to: 32},
+        {from: 6, to: 34},
+        {from: 8, to: 18},
+        {from: 8, to: 19},
+        {from: 8, to: 20},
+        {from: 8, to: 21},
+        {from: 8, to: 22},
+        {from: 8, to: 23},
+        {from: 8, to: 24},
+        {from: 8, to: 26},
+        {from: 17, to: 30},
+        {from: 17, to: 33},
+        {from: 33, to: 35},
+        {from: 33, to: 36},
+        {from: 33, to: 37},
+        {from: 33, to: 38},
+    ]);
+
+    // create a network
+    var container = document.getElementById('mynetwork');
+
+    // provide the data in the vis format
+    var data = {
+        nodes: nodes,
+        edges: edges
+    };
+    var options = {};
+
+    // initialize your network!
+    var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>
